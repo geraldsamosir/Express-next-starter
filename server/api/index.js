@@ -4,6 +4,9 @@ import swaggerJSDoc from "swagger-jsdoc";
 
 import path from "path"
 
+//import configutation
+import config from "../../config.json"
+
 
 //import users
 import Users from "./routes/users"
@@ -12,12 +15,12 @@ const app =  express()
 
 const swaggerDefinition = {
     info: {
-        title: 'express-stater',
-        version: '1.0.0',
-        description: 'starter app',
+        title: config.AplicationName,
+        version: config.version,
+        description: config.description,
     },
-    host: 'localhost:3000',
-    basePath: '/'
+    host: config.Host+':'+config.Port,
+    basePath: config.basePath
 }
 
 const options = {

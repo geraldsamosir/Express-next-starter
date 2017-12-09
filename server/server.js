@@ -4,8 +4,10 @@ import path from "path"
 
 import Api from  "./api/"
 
+//import configutation
+import config from "../config.json"
 
-const port =   parseInt(process.env.PORT, 10) || 3000
+const port =   parseInt(process.env.PORT, 10) || config.Port
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dir: './client', dev })
@@ -18,8 +20,6 @@ app.prepare()
 
 
     server.disable('X-Powered-By');    
-
-
 
 
     /**
@@ -40,8 +40,8 @@ app.prepare()
 
 
 
-    server.listen(3000, (err) => {
+    server.listen(port, (err) => {
         if (err) throw err;
-        console.log('Server ready on http://localhost:3000');
+        console.log('Server ready on http://localhost:'+port+'');
     });
 })

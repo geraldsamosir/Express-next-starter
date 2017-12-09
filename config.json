@@ -1,0 +1,10 @@
+{
+    "Host":"localhost",
+    "Port":"3000",
+    "Dbname":"",
+    "DbPassword":"",
+    "basePath":"/",
+    "AplicationName":"express-stater",
+    "version" : "1.0.0",
+    "description":"starter app"
+}
