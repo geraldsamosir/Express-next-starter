@@ -10,6 +10,7 @@
     "babel-plugin-wrap-in-js": "^1.1.0",
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
+    "commander": "^2.12.2",
     "express": "^4.16.2",
     "next": "^4.1.4",
     "path": "^0.12.7",
@@ -24,6 +25,7 @@
   },
   "scripts": {
     "dev": "./node_modules/.bin/babel-node ./server/server.js ",
+    "generate":"./node_modules/.bin/babel-node ./command-cli/generate.js",
     "test": "cd ./test && mocha *.js",
     "build": "next build",
     "heroku-postbuild": "next build",
