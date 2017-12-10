@@ -13,6 +13,15 @@ import Users from "./routes/users"
 
 const app =  express()
 
+/**
+* remove x-powered header
+*/
+app.use(function (req, res, next) {
+    res.removeHeader("X-Powered-By");
+    res.setHeader("X-Powered-By","geraldsamosir")
+    next();
+});
+
 const swaggerDefinition = {
     info: {
         title: config.AplicationName,
@@ -37,6 +46,7 @@ const swaggerSpec = swaggerJSDoc(options);
  * serve swagger
  */
 app.get('/swagger.json', function(req, res) {
+
   res.setHeader('Content-Type', 'application/json');
   res.send(swaggerSpec);
 });
@@ -47,14 +57,7 @@ app.get('/swagger.json', function(req, res) {
 app.use("/docs_api",express.static(path.join(__dirname, '../../swagerdocs')));
 
 
-/**
-* remove x-powered header
-*/
-app.use(function (req, res, next) {
-    res.removeHeader("X-Powered-By");
-    res.setHeader("X-Powered-By","geraldsamosir")
-    next();
-});
+
 
 
 app.get("/",(req,res)=>{

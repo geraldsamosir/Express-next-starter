@@ -18,9 +18,7 @@ app.prepare()
 .then(() => {
     const server = express()
 
-
     server.disable('X-Powered-By');    
-
 
     /**
      * api router

@@ -7,7 +7,7 @@ const router =  express.Router()
  *   get:
  *     tags:
  *       - users
- *     description: Returns all users
+ *     description: Returns all users for test
  *     produces:
  *       - application/json
  *     responses:
