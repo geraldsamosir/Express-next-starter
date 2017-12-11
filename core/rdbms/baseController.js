@@ -1,4 +1,4 @@
-import   {ResponseController} from "./"
+import   ResponseController from "../helper/responseController"
 
 const {Catcherr}  = require("../helper/catchErr")
 
