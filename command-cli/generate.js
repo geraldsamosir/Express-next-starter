@@ -16,7 +16,7 @@ else{
   program
     .version('0.1.0')
     .option('-c, --controller [controllerName]', 
-        'Add controller , controller name dont have capital alvabet and space' ,(controllerName)=>{
+        'Add controller , controller name dont have capital alfabet and space' ,(controllerName)=>{
         controllerGenerator(controllerName)
     })
     .option('-d , --database [database engine]','choose database engine')
@@ -24,7 +24,7 @@ else{
         modelGenerator(modelName,config.DbEngine)
     })
     .option('-r ,--router [routerName]',
-        'Add router , router name dont have capital alvabet and space' ,(routerName)=>{
+        'Add router , router name dont have capital alfabet and space' ,(routerName)=>{
             routerGenerator(routerName)
         })
     
