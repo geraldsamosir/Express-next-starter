@@ -8,8 +8,9 @@ import path from "path"
 import config from "../../config.json"
 
 
-//import users
-import Users from "./routes/users"
+//import router
+
+
 
 const app =  express()
 
@@ -58,14 +59,15 @@ app.use("/docs_api",express.static(path.join(__dirname, '../../swagerdocs')));
 
 
 
-
-
 app.get("/",(req,res)=>{
     res.json({
         message :"welcome to api"
     })
 })
 
-app.use("/users",Users)
+
+
+
 
 export default app
+

@@ -28,6 +28,18 @@ app.prepare()
      server.use("/api",Api)
 
 
+     /**
+      * handle router 404
+      */
+     server.use("/api/*",(req,res)=>{
+         res.status(404)
+         res.json({
+             status: 404,
+             message :"router not found"
+         })
+     })
+
+
     /**
      * client router
      * 
