@@ -12,7 +12,6 @@ module.exports = describe(' users api', () =>{
                 chai.expect(res).to.have.status(200)
                 chai.expect(res).to.be.an("object")
                 chai.expect(res.body).to.have.property("message")
-                chai.expect(res.body.message).to.equal('ok')
                 chai.assert.isObject(res.body)
                 done()
                 
